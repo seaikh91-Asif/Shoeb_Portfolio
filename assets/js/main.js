@@ -60,22 +60,34 @@ const scrollHeader = () => {
 }
 window.addEventListener('scroll', scrollHeader)
 /*=============== SWIPER WORK ===============*/ 
+/*=============== SWIPER WORK ===============*/ 
 const swiperWork = new Swiper('.work__swiper', {
- 
   loop: true,
   spaceBetween: 24,
-  slidePreView:'auto',
-   grabCursor: true, 
-   speed: 600,
+  slidesPerView: 1,
+  grabCursor: true,
+  speed: 600,
 
   pagination: {
     el: '.swiper-pagination',
-    clickble:true,
+    clickable: true,
   },
-//   autoplay: {
-//    deley: 2000, 
-//    disableOnInterection: false,
-//   }
+
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+    1150: {
+      slidesPerView: 3,
+      spaceBetween: 32,
+    },
+  },
+
+  //   autoplay: {
+  //    delay: 2000, 
+  //    disableOnInteraction: false,
+  //   }
 })
 
 /*=============== SERVICES ACCORDION ===============*/ 
