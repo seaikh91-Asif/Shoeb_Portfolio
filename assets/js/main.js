@@ -91,7 +91,27 @@ const swiperWork = new Swiper('.work__swiper', {
 })
 
 /*=============== SERVICES ACCORDION ===============*/ 
+const servicesCards = document.querySelectorAll('.services__card');
+const servicesButtons = document.querySelectorAll('.services__button');
 
+servicesButtons.forEach(button => {
+button.addEventListener('click', () => {
+const currentCard = button.closest('.services__card');
+const isOpen = currentCard.classList.contains('services-open');
+
+
+servicesCards.forEach(card => {
+card.classList.remove('services-open');
+card.classList.add('services-close');
+});
+
+
+if (!isOpen) {
+currentCard.classList.add('services-open');
+currentCard.classList.remove('services-close');
+}
+});
+});
 
 /*=============== TESTIMONIALS OF DUPLICATE CARDS ===============*/ 
 
