@@ -84,10 +84,10 @@ const swiperWork = new Swiper('.work__swiper', {
     },
   },
 
-  //   autoplay: {
-  //    delay: 2000, 
-  //    disableOnInteraction: false,
-  //   }
+     autoplay: {
+      delay: 2000, 
+      disableOnInteraction: false,
+     }
 })
 
 /*=============== SERVICES ACCORDION ===============*/ 
