@@ -114,7 +114,18 @@ currentCard.classList.remove('services-close');
 });
 
 /*=============== TESTIMONIALS OF DUPLICATE CARDS ===============*/ 
+const tracks = document.querySelectorAll('.testimonials__content');
 
+tracks.forEach(track => {
+   // Get the child testimonial sliders and create an array copy of all cards
+   // The spread operator [...] converts the HTMLCollection into an array
+   const cards = [...track.children]; 
+   
+   for (const card of cards) {
+      // Duplicate the card and append it at the end 
+      track.appendChild(card.cloneNode(true));
+   }
+});
 
 /*=============== CONTACT EMAIL JS ===============*/ 
 
