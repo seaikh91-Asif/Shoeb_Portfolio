@@ -860,10 +860,249 @@ img {
   }
 }
 
-/*=============== CONTACT SECTION ===============*/
+/*=============== CONTACT SECTION STYLING ===============*/
+.contact__container {
+  row-gap: 3rem;
+  padding-bottom: 3rem;
+}
 
+/* Form Styling */
+.contact__form {
+  display: grid;
+  row-gap: 1.5rem;
+}
 
-/*=============== FOOTER ===============*/
+.contact__group {
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+.contact__input {
+  width: 100%;
+  background-color: var(--container-color); /* Matches the dark grey pill background */ /*[cite: 2]*/
+  padding: 1.25rem 1.5rem;
+  border-radius: 1.5rem;
+  color: var(--white-color);
+  font-family: var(--body-font);
+  transition: border .3s, background-color .3s;
+}
+
+.contact__input::placeholder {
+  color: var(--text-color);
+}
+
+.contact__area {
+  height: 160px;
+  resize: none; /* Prevents user from dragging the corner */
+}
+
+/* Submit Button Styling */
+.contact__button {
+  background: var(--gradient-color); /* Vibrant green gradient */ /*[cite: 2]*/
+  color: var(--black-color);
+  padding: 1.25rem 2.5rem;
+  border-radius: 4rem; /* Pill shape */ /*[cite: 2]*/
+  font-weight: var(--font-semi-bold);
+  cursor: pointer;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .3s;
+}
+
+.contact__button:hover {
+  transform: translateY(-5px);
+}
+
+/* Info Cards Styling */
+.contact__info {
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+.contact__card {
+  background-color: var(--container-color);
+  padding: 1.25rem;
+  border-radius: 1.5rem; /* Rounded corners matching the image */ /*[cite: 2]*/
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  transition: background-color .3s;
+}
+
+.contact__card:hover {
+  background-color: var(--border-color);
+}
+
+.contact__card-icon {
+  font-size: 1.5rem;
+  color: var(--first-color); /* Green icons */ /*[cite: 2]*/
+}
+
+.contact__card-data {
+  display: grid;
+  row-gap: .25rem;
+}
+
+.contact__card-title {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+}
+
+.contact__card-description {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+/* Arrow Icon Container */
+.contact__card-arrow {
+  margin-left: auto; /* Pushes the arrow to the far right */ /*[cite: 2]*/
+  background-color: var(--body-color); /* Dark circular background */ /*[cite: 2]*/
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--white-color);
+  font-size: 1.25rem;
+  transition: transform .3s;
+}
+
+.contact__card:hover .contact__card-arrow {
+  transform: translate(4px, -4px); /* Slight diagonal move on hover */
+}
+
+/*=============== FOOTER LAYOUT (Using your :root colors) ===============*/
+.footer {
+  background-color: var(--container-color); /* Subtly stands out from the body */
+  padding-block: 4rem 2rem;
+  margin-top: 4rem;
+}
+
+/* Top 5-Column Grid */
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Mobile default */
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__brand {
+  grid-column: 1 / -1; /* Spans full width on mobile */
+  margin-bottom: 1rem;
+}
+
+.footer__logo {
+  color: var(--white-color);
+  font-family: var(--second-font);
+  font-size: var(--h1-font-size); 
+  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  transition: color .3s;
+}
+
+.footer__logo:hover {
+  color: var(--first-color); /* Root highlight color */
+}
+
+.footer__subtitle {
+  color: var(--first-color); /* Root highlight color */
+  font-size: var(--smaller-font-size); 
+  font-weight: var(--font-medium);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer__links {
+  display: grid;
+  row-gap: .75rem;
+}
+
+.footer__link {
+  color: var(--text-color);
+  font-size: var(--smaller-font-size);
+  text-transform: uppercase; 
+  font-weight: var(--font-medium);
+  letter-spacing: 1px;
+  transition: color .3s;
+}
+
+.footer__link:hover {
+  color: var(--first-color); /* Root highlight color */
+}
+
+/* Divider Line */
+.footer__divider {
+  border: none;
+  border-top: 1px solid var(--border-color); /* Root border color */
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* Bottom Centered Section */
+.footer__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding-top: 3rem;
+}
+
+.footer__social {
+  display: flex;
+  column-gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer__social-link {
+  background-color: transparent;
+  border: 1px solid var(--border-color); /* Root border color */
+  color: var(--text-color);
+  font-size: 1rem;
+  width: 40px; 
+  height: 40px;
+  border-radius: 50%; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color .3s, border-color .3s, color .3s, transform .3s;
+}
+
+.footer__social-link:hover {
+  background-color: var(--first-color); /* Root highlight color */
+  border-color: var(--first-color);
+  color: var(--black-color); /* High contrast dark icon on green hover */
+  transform: translateY(-3px);
+}
+
+.footer__copy {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color);
+}
+
+/*=============== RESPONSIVE BREAKPOINTS ===============*/
+@media (width >= 768px) {
+  .footer__container {
+    grid-template-columns: 1.5fr repeat(4, 1fr); /* 5 columns */
+    column-gap: 1.5rem;
+  }
+  
+  .footer__brand {
+    grid-column: auto;
+    margin-bottom: 0;
+  }
+}
 
 
 /*=============== SCROLL BAR ===============*/
@@ -897,6 +1136,16 @@ img {
   .skills__description{
     width: 500px;
     margin-inline: auto;
+  }
+
+  .footer__container {
+    grid-template-columns: 1.5fr repeat(4, 1fr); /* 5 columns: Logo is slightly wider */ /*[cite: 4]*/
+    column-gap: 1.5rem;
+  }
+  
+  .footer__brand {
+    grid-column: auto;
+    margin-bottom: 0;
   }
 
 
@@ -1073,7 +1322,7 @@ img {
 
   .testimonials__card {
     width: 100%;
-    max-width: 420px; /* ফিক্সড উইডথ এড়িয়ে চলুন */
+    max-width: 420px; 
     padding: 3rem;
     border-radius: 3rem;
   }
@@ -1108,6 +1357,34 @@ img {
     left: 0;
     background: linear-gradient(90deg, var(--body-color) 0%, hsla(0, 0%, 0%, 0) 100%);
   } 
+
+  .contact__container {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+    align-items: flex-start;
+  }
+  
+  .contact__info {
+    max-width: 400px;
+    margin-left: auto;
+  }
+
+ .footer {
+    padding-block: 5rem 2rem;
+  }
+  
+  .footer__container {
+    padding-bottom: 4rem;
+    column-gap: 3rem;
+  }
+  
+  .footer__divider {
+    width: 100%; 
+  }
+  
+  .footer__bottom {
+    padding-top: 4rem;
+  }
 } /* The @media query closes here */
 /* For 2K resolutions <> */
 
