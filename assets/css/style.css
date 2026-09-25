@@ -737,8 +737,8 @@ img {
 
 .skills__item{
   display: flex;
-  align-items: center;
-  column-gap: 0.25rem;
+align-items: center; /* Vertically centers the icon with the text */
+  column-gap: 0.75rem; /* Creates perfect, uniform space between icon and text */
   cursor: pointer;
   transition: filter 0.4s;
 }
